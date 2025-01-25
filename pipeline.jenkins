@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+               git 'https://github.com/shaktimaan-gangadhar/b24-evening.git' 
+            }
+        }
+        stage('Build') { 
+            steps {
+               echo 'build success' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                  echo 'Test success' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'deploy success' 
+            }
+        }
+    }
+}
